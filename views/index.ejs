@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/assets/style.css" type="text/css" rel="stylesheet" />
+    <title>Catalogo</title>
+  </head>
+  <!-- Creacion de tabla  -->
+  <body>
+    <h1>Catalogo de personas</h1>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Edad</th>
+          <th>Tipo de Sangre</th>
+          <th>NSS</th>
+          <th>Editar</th>
+          <th>Borrar</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% Persons.forEach(function(persona) { %>
+        <tr>
+          <td><%= persona.nombre %></td>
+          <td><%= persona.edad %></td>
+          <td><%= persona.tipoSangre %></td>
+          <td><%= persona.nss %></td>
+          <td>
+            <button>Editar</button>
+          </td>
+          <td>
+            <button>Borrar</button>
+          </td>
+        </tr>
+        <% }); %>
+      </tbody>
+    </table>
+    <br>
+    <a href="./addPerson">Agregar</a>
+  </body>
+</html>
